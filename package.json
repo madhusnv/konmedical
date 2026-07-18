@@ -10,12 +10,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "npm run build && wrangler pages deploy dist"
+    "deploy": "npm run build && npx wrangler pages deploy dist"
   },
   "dependencies": {
     "astro": "^7.1.1"
-  },
-  "devDependencies": {
-    "wrangler": "^4.112.0"
   }
 }
