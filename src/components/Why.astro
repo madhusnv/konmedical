@@ -1,0 +1,32 @@
+---
+const reasons = [
+  { icon: '🎓', title: 'Globally Recognised Degrees', text: 'Universities listed in WDOMS and recognised by international medical bodies, enabling global practice opportunities.' },
+  { icon: '💰', title: 'Affordable Fee Structure', text: 'Study MBBS at a fraction of the cost of private medical colleges in India, with low living expenses.' },
+  { icon: '🗣️', title: 'English-Medium Programs', text: 'Full MBBS / MD programs taught in English — no language barrier for Indian students.' },
+  { icon: '🏥', title: 'Modern Infrastructure', text: 'Advanced labs, simulation centres and teaching hospitals for strong clinical exposure from day one.' },
+  { icon: '🛡️', title: 'Safe & Student-Friendly', text: 'Vietnam and Georgia are among the safest countries for international students, with welcoming Indian communities.' },
+  { icon: '🤝', title: 'Complete Handholding', text: 'From counselling to campus arrival — documentation, visa, travel, hostel and local support by our Hyderabad team.' },
+];
+---
+
+<section id="why">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Why MBBS Abroad</span>
+      <h2>A Smarter Path to Your Medical Career</h2>
+      <p>
+        Vietnam and Georgia have emerged as two of the most preferred destinations for Indian
+        students pursuing quality medical education at an affordable cost.
+      </p>
+    </div>
+    <div class="why-grid">
+      {reasons.map((r) => (
+        <div class="why-card">
+          <div class="why-icon">{r.icon}</div>
+          <h3>{r.title}</h3>
+          <p>{r.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

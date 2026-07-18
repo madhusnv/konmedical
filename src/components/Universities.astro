@@ -1,0 +1,101 @@
+---
+const countries = [
+  {
+    flag: '🇻🇳',
+    name: 'MBBS in Vietnam',
+    tagline: 'High-quality, affordable medical education close to home',
+    universities: [
+      {
+        abbr: 'HIU',
+        name: 'Hong Bang International University',
+        loc: 'Ho Chi Minh City, Vietnam',
+        desc: 'A leading private university with a strong focus on health sciences, US-accredited standards and modern medical training facilities.',
+        logo: '/logos/hiu.png',
+        url: 'https://hiu.vn/en/home/',
+      },
+      {
+        abbr: 'NCTU',
+        name: 'Nam Can Tho University',
+        loc: 'Can Tho, Vietnam',
+        desc: 'Home to its own 300-bed university hospital, offering excellent hands-on clinical training with international-standard infrastructure.',
+        logo: '/logos/nctu.webp',
+        url: 'https://nctu.edu.vn/',
+      },
+      {
+        abbr: 'VNU',
+        name: 'Vietnam National University',
+        loc: 'Hanoi & Ho Chi Minh City, Vietnam',
+        desc: "Vietnam's premier national university system, known for academic excellence, research output and internationally ranked programs.",
+        logo: '/logos/vnu.svg',
+        url: 'https://en.vnu.edu.vn/',
+      },
+    ],
+  },
+  {
+    flag: '🇬🇪',
+    name: 'MBBS in Georgia',
+    tagline: 'European-standard medical education at an affordable cost',
+    universities: [
+      {
+        abbr: 'EEU',
+        name: 'East European University',
+        loc: 'Tbilisi, Georgia',
+        desc: 'Offers an English-medium Medical Doctor (MD) program with internships across 150+ partner hospitals and organisations.',
+        logo: '/logos/eeu.png',
+        url: 'https://eeu.edu.ge/?lang=en',
+      },
+      {
+        abbr: 'GAU',
+        name: 'Georgian American University',
+        loc: 'Tbilisi, Georgia',
+        desc: 'A US-style university delivering western-standard medical education with highly qualified Georgian and international faculty.',
+        logo: '/logos/gau.png',
+        url: 'https://gau.edu.ge/',
+      },
+      {
+        abbr: 'UG',
+        name: 'The University of Georgia',
+        loc: 'Tbilisi, Georgia',
+        desc: 'One of the largest private universities in Georgia with modern simulation labs, teaching clinics and a diverse international student body.',
+        logo: '/logos/ug.jpg',
+        url: 'https://ug.edu.ge/',
+      },
+    ],
+  },
+];
+---
+
+<section class="unis" id="universities">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Partner Universities</span>
+      <h2>Our Partner Medical Universities</h2>
+      <p>We work directly with reputed universities in Vietnam and Georgia to secure your MBBS admission.</p>
+    </div>
+
+    {countries.map((c) => (
+      <div class="country">
+        <div class="country-head">
+          <span class="flag">{c.flag}</span>
+          <div>
+            <h3>{c.name}</h3>
+            <p>{c.tagline}</p>
+          </div>
+        </div>
+        <div class="uni-grid">
+          {c.universities.map((u) => (
+            <div class="uni-card">
+              <div class="uni-logo-box">
+                <img src={u.logo} alt={`${u.name} logo`} loading="lazy" decoding="async" />
+              </div>
+              <h4>{u.name}</h4>
+              <div class="loc">{u.loc}</div>
+              <p>{u.desc}</p>
+              <a class="visit" href={u.url} target="_blank" rel="noopener">Visit University Website →</a>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

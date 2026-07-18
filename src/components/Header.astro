@@ -1,0 +1,26 @@
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">
+        Med<em>Abroad</em>
+        <small>Overseas Education Consultancy · Hyderabad</small>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#why">Why MBBS Abroad</a></li>
+        <li><a href="#universities">Universities</a></li>
+        <li><a href="#process">Admission Process</a></li>
+        <li><a class="nav-cta" href="#contact">Free Counselling</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('menuToggle');
+  const links = document.getElementById('navLinks');
+  toggle?.addEventListener('click', () => links?.classList.toggle('open'));
+  links?.querySelectorAll('a').forEach((a) =>
+    a.addEventListener('click', () => links.classList.remove('open'))
+  );
+</script>

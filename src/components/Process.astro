@@ -1,0 +1,26 @@
+---
+const steps = [
+  { title: 'Free Counselling', text: 'Call us or visit our Hyderabad office. We assess your profile and help you choose the right country and university.' },
+  { title: 'Documentation & Application', text: 'We prepare and submit your application with all required documents to your chosen university.' },
+  { title: 'Admission Letter & Visa', text: 'Receive your official admission letter, and we handle your complete visa process and documentation.' },
+  { title: 'Fly & Begin MBBS', text: 'Travel assistance, airport pickup, hostel arrangement and local support until you settle into campus life.' },
+];
+---
+
+<section id="process">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">How It Works</span>
+      <h2>Simple 4-Step Admission Process</h2>
+      <p>We make your MBBS abroad journey smooth and stress-free.</p>
+    </div>
+    <div class="steps">
+      {steps.map((s) => (
+        <div class="step">
+          <h4>{s.title}</h4>
+          <p>{s.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

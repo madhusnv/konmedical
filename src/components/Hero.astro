@@ -1,0 +1,53 @@
+<section class="hero">
+  <div class="container">
+    <div class="hero-copy">
+      <div class="hero-badges">
+        <span>🇻🇳 Vietnam</span>
+        <span>🇬🇪 Georgia</span>
+        <span>Admissions Open 2025–26</span>
+      </div>
+      <h1>Study <span>MBBS Abroad</span> at Globally Recognised Universities</h1>
+      <p class="lead">
+        Your trusted Hyderabad-based consultancy for MBBS admissions in Vietnam &amp; Georgia.
+        Affordable fees, English-medium programs, and complete end-to-end admission support.
+      </p>
+      <div class="hero-actions">
+        <a href="#enquire" class="btn btn-primary">Get Free Counselling</a>
+        <a href="tel:+919502644931" class="btn btn-outline">📞 Call 95026 44931</a>
+      </div>
+    </div>
+
+    <div class="hero-card" id="enquire">
+      <h3>Request a Free Callback</h3>
+      <p class="hero-card-sub">Fill the form — our counsellor will call you within 24 hours.</p>
+      <form id="callbackForm">
+        <div class="field"><input type="text" name="name" placeholder="Your Name" autocomplete="name" required /></div>
+        <div class="field">
+          <input type="tel" name="phone" placeholder="Phone Number" autocomplete="tel" inputmode="tel" pattern="[0-9+ ]{10,15}" required />
+        </div>
+        <div class="field"><input type="text" name="city" placeholder="City" autocomplete="address-level2" /></div>
+        <div class="field">
+          <textarea name="message" rows="3" placeholder="Interested country / university (optional)"></textarea>
+        </div>
+        <button type="submit" class="btn form-btn">Request Callback</button>
+        <div class="form-note">100% free counselling · No hidden charges</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Enquiry form -> opens WhatsApp with prefilled message
+  document.getElementById('callbackForm')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    const f = new FormData(form);
+    const msg = encodeURIComponent(
+      `Hello, I am ${f.get('name')} from ${f.get('city') || '-'}. ` +
+        'I am interested in MBBS admission abroad (Vietnam/Georgia). ' +
+        (f.get('message') ? `Message: ${f.get('message')}` : 'Please call me back.') +
+        ` My number: ${f.get('phone')}`
+    );
+    window.open(`https://wa.me/919502644931?text=${msg}`, '_blank');
+  });
+</script>
