@@ -131,13 +131,24 @@ nav {
 }
 .brand {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 2px;
 }
 .brand img {
   height: 46px;
   width: auto;
   object-fit: contain;
   display: block;
+}
+.brand-tagline {
+  color: var(--navy);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: uppercase;
 }
 .nav-links {
   display: flex;
@@ -707,6 +718,9 @@ footer b {
   }
   .brand img {
     height: 36px;
+  }
+  .brand-tagline {
+    font-size: 8px;
   }
   .why-grid,
   .uni-grid,
