@@ -129,21 +129,29 @@ nav {
   justify-content: space-between;
   padding: 16px 0;
 }
-.logo {
-  font-size: 22px;
-  font-weight: 800;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   color: var(--navy);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.2;
+  max-width: 380px;
 }
-.logo em {
-  font-style: normal;
-  color: var(--accent);
+.brand img {
+  width: 64px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
 }
-.logo small {
+.brand small {
   display: block;
   font-size: 11px;
   font-weight: 500;
   color: var(--muted);
   letter-spacing: 0.5px;
+  margin-top: 2px;
 }
 .nav-links {
   display: flex;
@@ -709,6 +717,17 @@ footer b {
   }
   .menu-toggle {
     display: block;
+  }
+  .brand {
+    gap: 8px;
+    font-size: 13.5px;
+    max-width: 290px;
+  }
+  .brand img {
+    width: 50px;
+  }
+  .brand small {
+    font-size: 10px;
   }
   .why-grid,
   .uni-grid,
